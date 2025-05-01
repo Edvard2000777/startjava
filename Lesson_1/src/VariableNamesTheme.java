@@ -1,5 +1,4 @@
-public class VariableNamesTheme
-{
+public class VariableNamesTheme {
     public static void main(String[] args) {
         // Цифра
         int digit = 7;
@@ -54,7 +53,7 @@ public class VariableNamesTheme
         System.out.println("Уникальное число = " + uniqueNumber);
 
         // Случайное число
-        int randomNumber = (int)(Math.random() * 100);
+        int randomNumber = (int) (Math.random() * 100);
         System.out.println("Случайное число = " + randomNumber);
 
         // Математическое выражение
