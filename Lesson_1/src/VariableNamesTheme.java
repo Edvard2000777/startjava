@@ -1,179 +1,138 @@
 public class VariableNamesTheme {
     public static void main(String[] args) {
-        // Цифра
-        int digit = 7;
+        System.out.println("1.РАЗНЫЕ ПЕРЕМЕННЫЕ");
+        int digit = 7;                              // Цифра
         System.out.println("Цифра = " + digit);
 
-        // Сумма чисел
-        int digitSum = 5 + 5;
+        int digitSum = 5 + 5;                       // Сумма чисел
         System.out.println("Сумма чисел = " + digitSum);
 
-        // Произведение цифр
-        int digitProduct = 7 * 8;
+        int digitProduct = 7 * 8;                   // Произведение цифр
         System.out.println("Произведение цифр = " + digitProduct);
 
-        // Максимальное число
-        int maxNumber = 999;
+        int maxNumber = 999;                        // Максимальное число
         System.out.println("Максимальное число = " + maxNumber);
 
-        // Количество десятков
-        int tensCount = 45 / 10;
+        int tensCount = 45 / 10;                    // Количество десятков
         System.out.println("Количество десятков = " + tensCount);
 
-        // Вес собаки
-        double dogWeight = 12.4;
+        double dogWeight = 12.4;                    // Вес собаки
         System.out.println("Вес собаки = " + dogWeight);
 
-        // Исходное число
-        int originalNumber = 123;
+        int originalNumber = 123;                   // Исходное число
         System.out.println("Исходное число = " + originalNumber);
 
-        // Процент по вкладу
-        double depositRate = 6.5;
+        double depositRate = 6.5;                   // Процент по вкладу
         System.out.println("Процент по вкладу = " + depositRate);
 
-        // Символ &
-        char ampersand = '&';
+        char ampersand = '&';                       // Символ &
         System.out.println("Символ & = " + ampersand);
 
-        // Код ошибки
-        int errorCode = 404;
+        int errorCode = 404;                        // Код ошибки
         System.out.println("Код ошибки = " + errorCode);
 
-        // Тип сообщения
-        String messageType = "Warning";
+        String messageType = "Warning";             // Тип сообщения
         System.out.println("Тип сообщения = " + messageType);
 
-        // Число нулей
-        int zeroCount = 2;
+        int zeroCount = 2;                          // Число нулей
         System.out.println("Число нулей = " + zeroCount);
 
-        // Уникальное число
-        int uniqueNumber = 2025;
+        int uniqueNumber = 2025;                    // Уникальное число
         System.out.println("Уникальное число = " + uniqueNumber);
 
-        // Случайное число
-        int randomNumber = (int) (Math.random() * 100);
+        int randomNumber = (int) (Math.random() * 100); // Случайное число
         System.out.println("Случайное число = " + randomNumber);
 
-        // Математическое выражение
-        String mathExpression = "3 + 4 * 2";
+        String mathExpression = "3 + 4 * 2";        // Математическое выражение
         System.out.println("Математическое выражение = " + mathExpression);
 
-        // Счет в игре
-        int gameScore = 12;
+        int gameScore = 12;                         // Счет в игре
         System.out.println("Счет в игре = " + gameScore);
 
-        // Максимальная длина
-        int maxLength = 255;
+        int maxLength = 255;                        // Максимальная длина
         System.out.println("Максимальная длина = " + maxLength);
 
-        // Пункт меню
-        String menuItem = "Файл";
+        String menuItem = "Файл";                   // Пункт меню
         System.out.println("Пункт меню = " + menuItem);
 
-        // Стоимость кофе
-        double coffeePrice = 199.99;
+        double coffeePrice = 199.99;                // Стоимость кофе
         System.out.println("Стоимость кофе = " + coffeePrice);
 
-        // Начальная дата
-        String startDate = "2025-05-01";
+        String startDate = "2025-05-01";            // Начальная дата
         System.out.println("Начальная дата = " + startDate);
 
-        // Окончание диапазона
-        String endRange = "2025-06-30";
+        String endRange = "2025-06-30";             // Окончание диапазона
         System.out.println("Окончание диапазона = " + endRange);
 
-        // Имя работника месяца
-        String employeeOfMonth = "Анна Иванова";
+        String employeeOfMonth = "Анна Иванова";    // Имя работника месяца
         System.out.println("Имя работника месяца = " + employeeOfMonth);
 
-        // Название электронной книги
-        String ebookTitle = "Java для начинающих";
+        String ebookTitle = "Java для начинающих";  // Название электронной книги
         System.out.println("Название электронной книги = " + ebookTitle);
 
-        // Размер
-        String size = "L";
+        String size = "L";                          // Размер
         System.out.println("Размер = " + size);
 
-        // Вместимость
-        int capacity = 64;
+        int capacity = 64;                          // Вместимость
         System.out.println("Вместимость = " + capacity);
 
-        // Счетчик
-        int counter = 0;
+        int counter = 0;                            // Счетчик
         System.out.println("Счетчик = " + counter);
 
-        // Путь до файла
-        String filePath = "C:/data/info.txt";
+        String filePath = "C:/data/info.txt";       // Путь до файла
         System.out.println("Путь до файла = " + filePath);
 
-        // Количество чисел в строке
-        int numberCountInLine = 3;
+        int numberCountInLine = 3;                  // Количество чисел в строке
         System.out.println("Количество чисел в строке = " + numberCountInLine);
 
-        // Сотни равны?
-        boolean areHundredsEqual = false;
-        System.out.println("Сотни равны? " + areHundredsEqual);
+        System.out.println("2.BOOLEAN-ПЕРЕМЕННЫЕ");
+        boolean HundredsEqual = false;             // Сотни равны?
+        System.out.println("Сотни равны? " + HundredsEqual);
 
-        // Компьютер включен?
-        boolean isComputerOn = true;
+        boolean isComputerOn = true;               // Компьютер включен?
         System.out.println("Компьютер включен? " + isComputerOn);
 
-        // Есть равные цифры?
-        boolean hasEqualDigits = true;
+        boolean hasEqualDigits = true;             // Есть равные цифры?
         System.out.println("Есть равные цифры? " + hasEqualDigits);
 
-        // Служба создана?
-        boolean isServiceCreated = true;
+        boolean isServiceCreated = true;           // Служба создана?
         System.out.println("Служба создана? " + isServiceCreated);
 
-        // Файл пустой?
-        boolean isFileEmpty = false;
+        boolean isFileEmpty = false;               // Файл пустой?
         System.out.println("Файл пустой? " + isFileEmpty);
 
-        // Соединение активное?
-        boolean isConnectionActive = true;
+        boolean isConnectionActive = true;         // Соединение активное?
         System.out.println("Соединение активное? " + isConnectionActive);
 
-        // Новый?
-        boolean isNew = true;
+        boolean isNew = true;                      // Новый?
         System.out.println("Новый? " + isNew);
 
-        // Электронная почта действительная?
-        boolean isEmailValid = true;
+        boolean isEmailValid = true;               // Электронная почта действительная?
         System.out.println("Электронная почта действительная? " + isEmailValid);
 
-        // Имеются уникальные строки?
-        boolean hasUniqueStrings = false;
+        boolean hasUniqueStrings = false;          // Имеются уникальные строки?
         System.out.println("Имеются уникальные строки? " + hasUniqueStrings);
 
-        // Старый UUID
-        String oldUUID = "a1b2c3d4-e5f6-7890-1234-abcdef123456";
-        System.out.println("Старый UUID = " + oldUUID);
+        System.out.println("3.АББРЕВИАТУРЫ И ИДЕНТИФИКАТОРЫ");
+        String oldUuid = "a1b2c3d4-e5f6-7890-1234-abcdef123456"; // Старый UUID
+        System.out.println("Старый UUID = " + oldUuid);
 
-        // Производитель оперативной памяти
-        String ramManufacturer = "Corsair";
+        String ramManufacturer = "Corsair";        // Производитель оперативной памяти
         System.out.println("Производитель ОЗУ = " + ramManufacturer);
 
-        // Емкость жесткого диска
-        String hddCapacity = "512GB";
+        String hddCapacity = "512GB";              // Емкость жесткого диска
         System.out.println("Емкость жесткого диска = " + hddCapacity);
 
-        // Определение HTTP
-        String httpDefinition = "Hypertext Transfer Protocol";
+        String httpDefinition = "Hypertext Transfer Protocol"; // Расшифровка HTTP
         System.out.println("Определение HTTP = " + httpDefinition);
 
-        // Сокращенный URL
-        String shortUrl = "bit.ly/abc123";
+        String shortUrl = "bit.ly/abc123";         // Сокращенный URL
         System.out.println("Сокращенный URL = " + shortUrl);
 
-        // Новый идентификатор клиента
-        String newClientId = "CLNT-0001-XYZ";
+        String newClientId = "CLNT-0001-XYZ";      // Новый ID клиента
         System.out.println("Новый ID клиента = " + newClientId);
 
-        // Количество символов в ASCII
-        int asciiSymbolCount = 128;
+        int asciiSymbolCount = 128;                // Количество символов в ASCII
         System.out.println("Количество символов в ASCII = " + asciiSymbolCount);
     }
 }
