@@ -37,7 +37,7 @@ public class VariablesTheme {
         int temp = x;
         x = y;
         y = temp;
-        System.out.println("\nМетод: третья переменная");
+        System.out.println("Метод: третья переменная");
         System.out.println("Результат: A1 = " + x + ", B1 = " + y);
 
         // Метод: арифметический
@@ -46,7 +46,7 @@ public class VariablesTheme {
         x += y;
         y = x - y;
         x -= y;
-        System.out.println("\nМетод: арифметический");
+        System.out.println("Метод: арифметический");
         System.out.println("Результат: A1 = " + x + ", B1 = " + y);
 
         // Метод: побитовый XOR
@@ -55,7 +55,33 @@ public class VariablesTheme {
         x ^= y;
         y ^= x;
         x ^= y;
-        System.out.println("\nМетод: побитовый");
+        System.out.println("Метод: побитовый");
         System.out.println("Результат: A1 = " + x + ", B1 = " + y);
+
+        System.out.println("4.ДЕКОДИРОВАНИЕ СООБЩЕНИЯ");
+        int c1 = 1055;
+        int c2 = 1088;
+        int c3 = 1080;
+        int c4 = 1074;
+        int c5 = 1077;
+        int c6 = 1090;
+
+        System.out.printf("%-6d%-6d%-6d%-6d%-6d%-6d%n", c1, c2, c3, c4, c5, c6);
+
+        System.out.printf("%-6c%-6c%-6c%-6c%-6c%-6c%n",
+                (char) c1, (char) c2, (char) c3,
+                (char) c4, (char) c5, (char) c6);
+
+        System.out.println("5.АНАЛИЗ КОДА ТОВАРА");
+        int CodTov = 123;
+        int p1 = CodTov / 100;
+        System.out.println("Код товара: " + p1);
+        System.out.println("  категория товара - " + p1);
+        int p2 = (CodTov % 100 % 100) / 10;
+        System.out.println("  подкатегория - " + p2);
+        int p3 = CodTov % 100 % 100 % 10;
+        System.out.println("  тип упаковки - " + p3);
+        System.out.println("Контрольная сумма = " + p1 + p2 + p3);
+        System.out.println("Проверочный код = " + p1 * p2 * p3);
     }
 }
