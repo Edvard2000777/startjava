@@ -1,6 +1,14 @@
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 public class VariablesTheme {
     public static void main(String[] args) {
         System.out.println("1.ВЫВОД ASCII-ГРАФИКИ");
+        // Формат времени
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss.SSS");
+
+        // Время старта
+        LocalTime startTime = LocalTime.now();
+        long startNano = System.nanoTime();
         System.out.println("\n" +
                 "                     /\\\n" +
                 "   J    a  v     v  /  \\\n" +
@@ -83,5 +91,138 @@ public class VariablesTheme {
         System.out.println("  тип упаковки - " + p3);
         System.out.println("Контрольная сумма = " + p1 + p2 + p3);
         System.out.println("Проверочный код = " + p1 * p2 * p3);
+
+        System.out.println("6.ТЕСТИРОВАНИЕ ДАТЧИКОВ ПЕРЕД ЗАПУСКОМ РАКЕТЫ");
+
+        // Byte: Температура
+        byte temperature = Byte.MAX_VALUE;
+        System.out.println("""
+                [Температура, °C]:
+                  Исходное: %d
+                  +1: %d
+                  -1: %d
+                """.formatted(
+                temperature,
+                (byte) (temperature + 1),
+                (byte) ((byte) (temperature + 1) - 1)
+        ));
+
+        // Short: Давление
+        short pressure = Short.MAX_VALUE;
+        System.out.println("""
+                [Давление, мм рт. ст.]:
+                  Исходное: %d
+                  +1: %d
+                  -1: %d
+                """.formatted(
+                pressure,
+                (short) (pressure + 1),
+                (short) ((short) (pressure + 1) - 1)
+        ));
+
+        // Char: Код состояния системы
+        char systemCode = Character.MAX_VALUE;
+        System.out.println("""
+                [Код состояния системы, ед.]:
+                  Исходное: %d
+                  +1: %d
+                  -1: %d
+                """.formatted(
+                (int) systemCode,
+                (int) (char) (systemCode + 1),
+                (int) (char) ((char) (systemCode + 1) - 1)
+        ));
+
+        // Int: Пройденное расстояние
+        int distance = Integer.MAX_VALUE;
+        System.out.println("""
+                [Пройденное расстояние, м]:
+                  Исходное: %d
+                  +1: %d
+                  -1: %d
+                """.formatted(
+                distance,
+                distance + 1,
+                (distance + 1) - 1
+        ));
+
+        // Long: Время с момента старта
+        long timeElapsed = Long.MAX_VALUE;
+        System.out.println("""
+                [Время с момента старта, мс]:
+                  Исходное: %d
+                  +1: %d
+                  -1: %d
+                """.formatted(
+                timeElapsed,
+                timeElapsed + 1,
+                (timeElapsed + 1) - 1
+        ));
+
+        System.out.println("7.ВЫВОД ПАРАМЕТРОВ JVM И ОС");
+        Runtime runtime = Runtime.getRuntime();
+
+        int availableProcessors = runtime.availableProcessors();
+        long totalMemory = runtime.totalMemory(); // Выделенная память (байты)
+        long freeMemory = runtime.freeMemory();   // Свободная память (байты)
+        long maxMemory = runtime.maxMemory();     // Максимально доступная память (байты)
+        long usedMemory = totalMemory - freeMemory;
+
+        System.out.println("Доступное число ядер: " + availableProcessors);
+        System.out.println("Выделенная память (МБ): " + bytesToMegabytes(totalMemory));
+        System.out.println("Свободная память (МБ): " + bytesToMegabytes(freeMemory));
+        System.out.println("Используемая память (МБ): " + bytesToMegabytes(usedMemory));
+        System.out.println("Максимально доступная для выделения память (МБ): " + bytesToMegabytes(maxMemory));
+
+        // Сведения об ОС и Java
+        String osName = System.getProperty("os.name");
+        String osVersion = System.getProperty("os.version");
+        String javaVersion = System.getProperty("java.version");
+        String fileSeparator = System.getProperty("file.separator");
+        String systemDrive = System.getenv("SystemDrive"); // переменная окружения Windows, для Linux/macOS вернёт null
+
+        // Сведения о JVM
+        int cores = runtime.availableProcessors();
+        double totalMB = totalMemory / 1024.0 / 1024;
+        double freeMB = freeMemory / 1024.0 / 1024;
+        double usedMB = usedMemory / 1024.0 / 1024;
+        double maxMB = maxMemory / 1024.0 / 1024;
+
+        // Вывод
+        System.out.println("""
+                Характеристики ОС:
+                -----------------
+                Системный диск: %s
+                Версия ОС: %s
+                Версия Java: %s
+                """.formatted(systemDrive != null ? systemDrive : "недоступно", osVersion, javaVersion, fileSeparator));
+
+        System.out.printf("""
+                Характеристики JVM:
+                -------------------
+                Доступное число ядер: %d
+                Выделенная память (МБ): %.1f
+                Свободная память (МБ): %.1f
+                Используемая память (МБ): %.1f
+                Максимально доступная память (МБ): %.1f
+                """, cores, totalMB, freeMB, usedMB, maxMB);
+
+        System.out.println("8.ЗАМЕР ВРЕМЕНИ РАБОТЫ КОДА");
+        // Время окончания
+        long endNano = System.nanoTime();
+        LocalTime endTime = LocalTime.now();
+
+        double durationSec = (endNano - startNano) / 1_000_000_000.0;
+
+        // Вывод времени
+        System.out.println();
+        System.out.printf("Старт проверки: %s%n", startTime.format(timeFormatter));
+        System.out.printf("Финиш проверки: %s%n", endTime.format(timeFormatter));
+        System.out.printf("Время работы:   %.3f сек%n", durationSec);
+    }
+
+    static long bytesToMegabytes(long bytes) {
+        return bytes / (1024 * 1024);
     }
 }
+
