@@ -163,9 +163,12 @@ public class VariablesTheme {
         Runtime runtime = Runtime.getRuntime();
 
         int availableProcessors = runtime.availableProcessors();
-        long totalMemory = runtime.totalMemory(); // Выделенная память (байты)
-        long freeMemory = runtime.freeMemory();   // Свободная память (байты)
-        long maxMemory = runtime.maxMemory();     // Максимально доступная память (байты)
+        // Выделенная память (байты)
+        long totalMemory = runtime.totalMemory();
+        // Свободная память (байты)
+        long freeMemory = runtime.freeMemory();
+        // Максимально доступная память (байты)
+        long maxMemory = runtime.maxMemory();
         long usedMemory = totalMemory - freeMemory;
 
         System.out.println("Доступное число ядер: " + availableProcessors);
