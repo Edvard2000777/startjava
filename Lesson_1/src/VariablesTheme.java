@@ -1,29 +1,27 @@
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+
 public class VariablesTheme {
     public static void main(String[] args) {
         System.out.println("1.ВЫВОД ASCII-ГРАФИКИ");
-        // Формат времени
-        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss.SSS");
-
-        // Время старта
-        LocalTime startTime = LocalTime.now();
-        long startNano = System.nanoTime();
-        System.out.println("\n" +
-                "                     /\\\n" +
-                "   J    a  v     v  /  \\\n" +
-                "   J   a a  v   v  /_( )\\\n" +
-                "J  J  aaaaa  V V  /      \\\n" +
-                " JJ  a     a  V  /___/\\___\\\n" +
-                "\n");
-        String Textblock = "\n" +
-                "         /\\            \n" +
-                "   J    /  \\  v     v  a\n" +
-                "   J   /_( )\\  v   v  a a\n" +
-                "J  J  /      \\  V V  aaaaa\n" +
-                " JJ  /___/\\___\\  V  a     a\n" +
-                "\n";
-        System.out.println(Textblock);
+        // Первая часть графики
+        System.out.println("""
+                
+                                     /\\
+                   J    a  v     v  /  \\
+                   J   a a  v   v  /_( )\\
+                J  J  aaaaa  V V  /      \\
+                 JJ  a     a  V  /___/\\___\\
+                """);
+        String text = """
+                
+                         /\\
+                   J    /  \\  v     v  a
+                   J   /_( )\\  v   v  a a
+                J  J  /      \\  V V  aaaaa
+                 JJ  /___/\\___\\  V  a     a
+                """;
+        System.out.println(text);
         System.out.println("2.РАСЧЕТ СТОИМОСТИ ТОВАРА");
         float penPrice = 105.5f;
         float bookPrice = 235.23f;
@@ -36,37 +34,40 @@ public class VariablesTheme {
         System.out.println("Сумма скидки: " + discountAmount);
         System.out.println("Стоимость со скидкой: " + (totalPrice - discountAmount));
         System.out.println("3.РАСЧЕТ СТОИМОСТИ ТОВАРА");
-        int A1 = 2, B1 = 5;
-        System.out.println("Исходные значения: A1 = " + A1 + ", B1 = " + B1);
+        int t1 = 2;
+        int t2 = 5;
+        System.out.println("Исходные значения: A1 = " + t1 + ", B1 = " + t2);
 
-        System.out.println("3.ПЕРЕСТАНОВКА ЗНАЧЕНИЙ ЯЧЕЕК В ТАБЛИЦЕ");
+        System.out.println("4.ПЕРЕСТАНОВКА ЗНАЧЕНИЙ ЯЧЕЕК В ТАБЛИЦЕ");
         // Метод: с использованием третьей переменной
-        int x = A1, y = B1;
-        int temp = x;
-        x = y;
-        y = temp;
-        System.out.println("Метод: третья переменная");
-        System.out.println("Результат: A1 = " + x + ", B1 = " + y);
+        int x3 = t1;
+        int y4 = t2;
+        int temp = x3;
+        x3 = y4;
+        y4 = temp;
+        System.out.println("\nМетод: третья переменная");
+        System.out.println("Результат: A1 = " + x3 + ", B1 = " + y4);
 
         // Метод: арифметический
-        x = A1;
-        y = B1;
-        x += y;
-        y = x - y;
-        x -= y;
-        System.out.println("Метод: арифметический");
-        System.out.println("Результат: A1 = " + x + ", B1 = " + y);
+        int x1 = t1;
+        int y1 = t2;
+        x1 = x1 + y1;
+        y1 = x1 - y1;
+        x1 = x1 - y1;
+        System.out.println("\nМетод: арифметический");
+        System.out.println("Результат: A1 = " + x1 + ", B1 = " + y1);
 
         // Метод: побитовый XOR
-        x = A1;
-        y = B1;
-        x ^= y;
-        y ^= x;
-        x ^= y;
-        System.out.println("Метод: побитовый");
-        System.out.println("Результат: A1 = " + x + ", B1 = " + y);
+        int x2 = t1;
+        int y2 = t2;
+        x2 = x2 ^ y2;
+        y2 = y2 ^ x2;
+        x2 = x2 ^ y2;
+        System.out.println("\nМетод: побитовый");
+        System.out.println("Результат: A1 = " + x2 + ", B1 = " + y2);
 
-        System.out.println("4.ДЕКОДИРОВАНИЕ СООБЩЕНИЯ");
+        System.out.println("5.ДЕКОДИРОВАНИЕ СООБЩЕНИЯ");
+
         int c1 = 1055;
         int c2 = 1088;
         int c3 = 1080;
@@ -80,86 +81,66 @@ public class VariablesTheme {
                 (char) c1, (char) c2, (char) c3,
                 (char) c4, (char) c5, (char) c6);
 
-        System.out.println("5.АНАЛИЗ КОДА ТОВАРА");
-        int CodTov = 123;
-        int p1 = CodTov / 100;
+        System.out.println("6.АНАЛИЗ КОДА ТОВАРА");
+        int cod = 123;
+        int p1 = cod / 100;
         System.out.println("Код товара: " + p1);
         System.out.println("  категория товара - " + p1);
-        int p2 = (CodTov % 100 % 100) / 10;
+        int p2 = (cod % 100 % 100) / 10;
         System.out.println("  подкатегория - " + p2);
-        int p3 = CodTov % 100 % 100 % 10;
+        int p3 = cod % 100 % 100 % 10;
         System.out.println("  тип упаковки - " + p3);
         System.out.println("Контрольная сумма = " + p1 + p2 + p3);
         System.out.println("Проверочный код = " + p1 * p2 * p3);
 
-        System.out.println("6.ТЕСТИРОВАНИЕ ДАТЧИКОВ ПЕРЕД ЗАПУСКОМ РАКЕТЫ");
+        System.out.println("7.ТЕСТИРОВАНИЕ ДАТЧИКОВ ПЕРЕД ЗАПУСКОМ РАКЕТЫ");
 
         // Byte: Температура
         byte temperature = Byte.MAX_VALUE;
         System.out.println("""
                 [Температура, °C]:
-                  Исходное: %d
-                  +1: %d
-                  -1: %d
-                """.formatted(
-                temperature,
-                (byte) (temperature + 1),
-                (byte) ((byte) (temperature + 1) - 1)
-        ));
+                  Исходное:""" + temperature + """
+                +1:""" + (byte) (temperature + 1) + """
+                -1:""" + (byte) ((byte) (temperature + 1) - 1) + """
+                """);
 
         // Short: Давление
         short pressure = Short.MAX_VALUE;
         System.out.println("""
                 [Давление, мм рт. ст.]:
-                  Исходное: %d
-                  +1: %d
-                  -1: %d
-                """.formatted(
-                pressure,
-                (short) (pressure + 1),
-                (short) ((short) (pressure + 1) - 1)
-        ));
+                  Исходное:""" + pressure + """
+                +1:""" + (short) (pressure + 1) + """
+                -1:""" + (short) ((short) (pressure + 1) - 1) + """
+                """);
 
         // Char: Код состояния системы
         char systemCode = Character.MAX_VALUE;
         System.out.println("""
                 [Код состояния системы, ед.]:
-                  Исходное: %d
-                  +1: %d
-                  -1: %d
-                """.formatted(
-                (int) systemCode,
-                (int) (char) (systemCode + 1),
-                (int) (char) ((char) (systemCode + 1) - 1)
-        ));
+                  Исходное:""" + (int) systemCode + """
+                +1:""" + (int) (char) (systemCode + 1) + """
+                -1:""" + (int) (char) ((char) (systemCode + 1) - 1) + """
+                """);
 
         // Int: Пройденное расстояние
         int distance = Integer.MAX_VALUE;
         System.out.println("""
                 [Пройденное расстояние, м]:
-                  Исходное: %d
-                  +1: %d
-                  -1: %d
-                """.formatted(
-                distance,
-                distance + 1,
-                (distance + 1) - 1
-        ));
+                  Исходное:""" + distance + """
+                +1:""" + distance + 1 + """
+                -1:""" + ((distance + 1) - 1) + """
+                """
+        );
 
         // Long: Время с момента старта
         long timeElapsed = Long.MAX_VALUE;
         System.out.println("""
                 [Время с момента старта, мс]:
-                  Исходное: %d
-                  +1: %d
-                  -1: %d
-                """.formatted(
-                timeElapsed,
-                timeElapsed + 1,
-                (timeElapsed + 1) - 1
-        ));
-
-        System.out.println("7.ВЫВОД ПАРАМЕТРОВ JVM И ОС");
+                  Исходное:""" + timeElapsed + """
+                +1:""" + timeElapsed + 1 + """
+                -1:""" + (timeElapsed + 1 - 1) + """
+                """);
+        System.out.println("8.ВЫВОД ПАРАМЕТРОВ JVM И ОС");
         Runtime runtime = Runtime.getRuntime();
 
         int availableProcessors = runtime.availableProcessors();
@@ -178,28 +159,27 @@ public class VariablesTheme {
         System.out.println("Максимально доступная для выделения память (МБ): " + bytesToMegabytes(maxMemory));
 
         // Сведения об ОС и Java
-        String osName = System.getProperty("os.name");
         String osVersion = System.getProperty("os.version");
         String javaVersion = System.getProperty("java.version");
         String fileSeparator = System.getProperty("file.separator");
-        String systemDrive = System.getenv("SystemDrive"); // переменная окружения Windows, для Linux/macOS вернёт null
+        // переменная окружения Windows, для Linux/macOS вернёт null
+        String systemDrive = System.getenv("SystemDrive");
 
         // Сведения о JVM
         int cores = runtime.availableProcessors();
-        double totalMB = totalMemory / 1024.0 / 1024;
-        double freeMB = freeMemory / 1024.0 / 1024;
-        double usedMB = usedMemory / 1024.0 / 1024;
-        double maxMB = maxMemory / 1024.0 / 1024;
+        double totalMb = totalMemory / 1024.0 / 1024;
+        double freeMb = freeMemory / 1024.0 / 1024;
+        double usedMb = usedMemory / 1024.0 / 1024;
+        double maxMb = maxMemory / 1024.0 / 1024;
 
         // Вывод
         System.out.println("""
                 Характеристики ОС:
                 -----------------
-                Системный диск: %s
-                Версия ОС: %s
-                Версия Java: %s
-                """.formatted(systemDrive != null ? systemDrive : "недоступно", osVersion, javaVersion, fileSeparator));
-
+                Имя ОС:""" + (systemDrive != null ? systemDrive : "недоступно") + """
+                Системный диск:""" + osVersion + """
+                Версия ОС:""" + javaVersion + """
+                Версия Java:""" + fileSeparator);
         System.out.printf("""
                 Характеристики JVM:
                 -------------------
@@ -208,12 +188,17 @@ public class VariablesTheme {
                 Свободная память (МБ): %.1f
                 Используемая память (МБ): %.1f
                 Максимально доступная память (МБ): %.1f
-                """, cores, totalMB, freeMB, usedMB, maxMB);
+                """, cores, totalMb, freeMb, usedMb, maxMb);
 
-        System.out.println("8.ЗАМЕР ВРЕМЕНИ РАБОТЫ КОДА");
+        System.out.println("9.ЗАМЕР ВРЕМЕНИ РАБОТЫ КОДА");
         // Время окончания
         long endNano = System.nanoTime();
         LocalTime endTime = LocalTime.now();
+        // Формат времени
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm:ss.SSS");
+        // Время старта
+        LocalTime startTime = LocalTime.now();
+        long startNano = System.nanoTime();
 
         double durationSec = (endNano - startNano) / 1_000_000_000.0;
 
