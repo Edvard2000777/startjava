@@ -1,3 +1,4 @@
+import java.io.File;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
@@ -40,13 +41,15 @@ public class VariablesTheme {
 
         System.out.println("4.ПЕРЕСТАНОВКА ЗНАЧЕНИЙ ЯЧЕЕК В ТАБЛИЦЕ");
         // Метод: с использованием третьей переменной
-        int x3 = t1;
-        int y4 = t2;
-        int temp = x3;
-        x3 = y4;
-        y4 = temp;
+        int a1 = t1;
+        int b1 = t2;
+
+        int temp = a1;
+        a1 = b1;
+        b1 = temp;
+
         System.out.println("\nМетод: третья переменная");
-        System.out.println("Результат: A1 = " + x3 + ", B1 = " + y4);
+        System.out.println("Результат: A1 = " + a1 + ", B1 = " + b1);
 
         // Метод: арифметический
         int x1 = t1;
@@ -161,7 +164,7 @@ public class VariablesTheme {
         // Сведения об ОС и Java
         String osVersion = System.getProperty("os.version");
         String javaVersion = System.getProperty("java.version");
-        String fileSeparator = System.getProperty("file.separator");
+        String fileSeparator = File.separator;
         // переменная окружения Windows, для Linux/macOS вернёт null
         String systemDrive = System.getenv("SystemDrive");
 
@@ -177,9 +180,10 @@ public class VariablesTheme {
                 Характеристики ОС:
                 -----------------
                 Имя ОС:""" + (systemDrive != null ? systemDrive : "недоступно") + """
-                Системный диск:""" + osVersion + """
-                Версия ОС:""" + javaVersion + """
-                Версия Java:""" + fileSeparator);
+                \nСистемный диск:""" + osVersion + """
+                \nВерсия ОС:""" + javaVersion + """
+                \nВерсия Java:""" + fileSeparator);
+
         System.out.printf("""
                 Характеристики JVM:
                 -------------------
