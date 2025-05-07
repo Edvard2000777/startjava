@@ -117,39 +117,39 @@ public class VariableNamesTheme {
         System.out.println("2.BOOLEAN-ПЕРЕМЕННЫЕ");
 
         // Сотни равны?
-        boolean isHundredsEqual = false;
-        System.out.println("Сотни равны? " + isHundredsEqual);
+        boolean isHundredsDigitEqual = false; // Использовано уточнение "digit", прилагательное "equal"
+        System.out.println("Сотни равны? " + isHundredsDigitEqual);
 
-        // Компьютер включен?
-        boolean isComputerOn = true;
-        System.out.println("Компьютер включен? " + isComputerOn);
+         // Компьютер включён?
+        boolean isComputerOn = true; // прилагательное "on"
+        System.out.println("Компьютер включён? " + isComputerOn);
 
         // Есть равные цифры?
-        boolean hasEqualDigits = true;
+        boolean hasEqualDigits = true; // глагол "has" и прилагательное "equal"
         System.out.println("Есть равные цифры? " + hasEqualDigits);
 
         // Служба создана?
-        boolean isServiceCreated = true;
+        boolean isServiceCreated = true; // прилагательное "created"
         System.out.println("Служба создана? " + isServiceCreated);
 
         // Файл пустой?
-        boolean isFileEmpty = false;
+        boolean isFileEmpty = false; // прилагательное "empty"
         System.out.println("Файл пустой? " + isFileEmpty);
 
         // Соединение активное?
-        boolean isConnectionActive = true;
+        boolean isConnectionActive = true; // прилагательное "active"
         System.out.println("Соединение активное? " + isConnectionActive);
 
-        // Новый?
-        boolean isNew = true;
-        System.out.println("Новый? " + isNew);
+        // Новый файл?
+        boolean isNewFile = true; // уточнение "File", прилагательное "new"
+        System.out.println("Новый файл? " + isNewFile);
 
         // Электронная почта действительная?
-        boolean isEmailValid = true;
+        boolean isEmailValid = true; // прилагательное "valid"
         System.out.println("Электронная почта действительная? " + isEmailValid);
 
         // Имеются уникальные строки?
-        boolean hasUniqueStrings = false;
+        boolean hasUniqueStrings = false; // глагол "has" и прилагательное "unique"
         System.out.println("Имеются уникальные строки? " + hasUniqueStrings);
         System.out.println("  ");
         System.out.println("3.АББРЕВИАТУРЫ И ИДЕНТИФИКАТОРЫ");
