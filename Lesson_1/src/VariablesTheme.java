@@ -23,6 +23,7 @@ public class VariablesTheme {
                  JJ  /___/\\___\\  V  a     a
                 """;
         System.out.println(text);
+        System.out.println("     ");
         System.out.println("2.РАСЧЕТ СТОИМОСТИ ТОВАРА");
         float penPrice = 105.5f;
         float bookPrice = 235.23f;
@@ -38,7 +39,7 @@ public class VariablesTheme {
         int t1 = 2;
         int t2 = 5;
         System.out.println("Исходные значения: A1 = " + t1 + ", B1 = " + t2);
-
+        System.out.println("     ");
         System.out.println("4.ПЕРЕСТАНОВКА ЗНАЧЕНИЙ ЯЧЕЕК В ТАБЛИЦЕ");
         // Метод: с использованием третьей переменной
         int a1 = t1;
@@ -68,7 +69,7 @@ public class VariablesTheme {
         x2 = x2 ^ y2;
         System.out.println("\nМетод: побитовый");
         System.out.println("Результат: A1 = " + x2 + ", B1 = " + y2);
-
+        System.out.println("     ");
         System.out.println("5.ДЕКОДИРОВАНИЕ СООБЩЕНИЯ");
 
         int c1 = 1055;
@@ -83,7 +84,7 @@ public class VariablesTheme {
         System.out.printf("%-6c%-6c%-6c%-6c%-6c%-6c%n",
                 (char) c1, (char) c2, (char) c3,
                 (char) c4, (char) c5, (char) c6);
-
+        System.out.println("     ");
         System.out.println("6.АНАЛИЗ КОДА ТОВАРА");
         int cod = 123;
         int p1 = cod / 100;
@@ -95,7 +96,7 @@ public class VariablesTheme {
         System.out.println("  тип упаковки - " + p3);
         System.out.println("Контрольная сумма = " + p1 + p2 + p3);
         System.out.println("Проверочный код = " + p1 * p2 * p3);
-
+        System.out.println("     ");
         System.out.println("7.ТЕСТИРОВАНИЕ ДАТЧИКОВ ПЕРЕД ЗАПУСКОМ РАКЕТЫ");
 
         // Byte: Температура
@@ -143,6 +144,7 @@ public class VariablesTheme {
                 +1:""" + timeElapsed + 1 + """
                 -1:""" + (timeElapsed + 1 - 1) + """
                 """);
+        System.out.println("     ");
         System.out.println("8.ВЫВОД ПАРАМЕТРОВ JVM И ОС");
         Runtime runtime = Runtime.getRuntime();
 
@@ -193,7 +195,7 @@ public class VariablesTheme {
                 Используемая память (МБ): %.1f
                 Максимально доступная память (МБ): %.1f
                 """, cores, totalMb, freeMb, usedMb, maxMb);
-
+        System.out.println("     ");
         System.out.println("9.ЗАМЕР ВРЕМЕНИ РАБОТЫ КОДА");
         // Время окончания
         long endNano = System.nanoTime();
