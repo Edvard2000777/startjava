@@ -113,47 +113,50 @@ public class VariableNamesTheme {
         // Количество чисел в строке
         int numberCountInLine = 3;
         System.out.println("Количество чисел в строке = " + numberCountInLine);
-        System.out.println(" ");
-        System.out.println("2.BOOLEAN-ПЕРЕМЕННЫЕ");
 
+        System.out.println("\n2.BOOLEAN-ПЕРЕМЕННЫЕ");
         // Сотни равны?
-        boolean isHundredsDigitEqual = false; // Использовано уточнение "digit", прилагательное "equal"
+        boolean isHundredsDigitEqual = false;
+        // Использовано уточнение "digit", прилагательное "equal"
         System.out.println("Сотни равны? " + isHundredsDigitEqual);
 
-         // Компьютер включён?
-        boolean isComputerOn = true; // прилагательное "on"
+        // Компьютер включён?
+        boolean isComputerOn = true;
+        // прилагательное "on"
         System.out.println("Компьютер включён? " + isComputerOn);
 
         // Есть равные цифры?
-        boolean hasEqualDigits = true; // глагол "has" и прилагательное "equal"
+        boolean hasEqualDigits = true;
+        // глагол "has" и прилагательное "equal"
         System.out.println("Есть равные цифры? " + hasEqualDigits);
 
         // Служба создана?
-        boolean isServiceCreated = true; // прилагательное "created"
+        boolean isServiceCreated = true;
+        // прилагательное "created"
         System.out.println("Служба создана? " + isServiceCreated);
 
         // Файл пустой?
-        boolean isFileEmpty = false; // прилагательное "empty"
-        System.out.println("Файл пустой? " + isFileEmpty);
+        boolean isEmptyFile = false;
+        // прилагательное "empty"
+        System.out.println("Файл пустой? " + isEmptyFile);
 
         // Соединение активное?
-        boolean isConnectionActive = true; // прилагательное "active"
-        System.out.println("Соединение активное? " + isConnectionActive);
+        boolean isActiveConnection = true;
+        System.out.println("Соединение активное? " + isActiveConnection);
 
         // Новый файл?
-        boolean isNewFile = true; // уточнение "File", прилагательное "new"
+        boolean isNewFile = true;
         System.out.println("Новый файл? " + isNewFile);
 
         // Электронная почта действительная?
-        boolean isEmailValid = true; // прилагательное "valid"
-        System.out.println("Электронная почта действительная? " + isEmailValid);
+        boolean isValidEmail = true;
+        System.out.println("Электронная почта действительная? " + isValidEmail);
 
         // Имеются уникальные строки?
-        boolean hasUniqueStrings = false; // глагол "has" и прилагательное "unique"
+        boolean hasUniqueStrings = false;
         System.out.println("Имеются уникальные строки? " + hasUniqueStrings);
-        System.out.println("  ");
-        System.out.println("3.АББРЕВИАТУРЫ И ИДЕНТИФИКАТОРЫ");
 
+        System.out.println("\n3.АББРЕВИАТУРЫ И ИДЕНТИФИКАТОРЫ");
         // Старый UUID
         String oldUuid = "a1b2c3d4-e5f6-7890-1234-abcdef123456";
         System.out.println("Старый UUID = " + oldUuid);

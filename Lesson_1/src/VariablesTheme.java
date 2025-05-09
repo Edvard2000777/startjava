@@ -23,8 +23,8 @@ public class VariablesTheme {
                  JJ  /___/\\___\\  V  a     a
                 """;
         System.out.println(text);
-        System.out.println("     ");
-        System.out.println("2.РАСЧЕТ СТОИМОСТИ ТОВАРА");
+
+        System.out.println("\n2.РАСЧЕТ СТОИМОСТИ ТОВАРА");
         float penPrice = 105.5f;
         float bookPrice = 235.23f;
         float discountRate = 0.11f;
@@ -35,12 +35,10 @@ public class VariablesTheme {
         System.out.println("Стоимость без скидки: " + totalPrice);
         System.out.println("Сумма скидки: " + discountAmount);
         System.out.println("Стоимость со скидкой: " + (totalPrice - discountAmount));
-        System.out.println("3.РАСЧЕТ СТОИМОСТИ ТОВАРА");
+        System.out.println("\n3.ПЕРЕСТАНОВКА ЗНАЧЕНИЙ ЯЧЕЕК В ТАБЛИЦЕ");
         int t1 = 2;
         int t2 = 5;
         System.out.println("Исходные значения: A1 = " + t1 + ", B1 = " + t2);
-        System.out.println("     ");
-        System.out.println("4.ПЕРЕСТАНОВКА ЗНАЧЕНИЙ ЯЧЕЕК В ТАБЛИЦЕ");
         // Метод: с использованием третьей переменной
         int a1 = t1;
         int b1 = t2;
@@ -58,7 +56,7 @@ public class VariablesTheme {
         x1 = x1 + y1;
         y1 = x1 - y1;
         x1 = x1 - y1;
-        System.out.println("\nМетод: арифметический");
+        System.out.println("Метод: арифметический");
         System.out.println("Результат: A1 = " + x1 + ", B1 = " + y1);
 
         // Метод: побитовый XOR
@@ -67,10 +65,10 @@ public class VariablesTheme {
         x2 = x2 ^ y2;
         y2 = y2 ^ x2;
         x2 = x2 ^ y2;
-        System.out.println("\nМетод: побитовый");
+        System.out.println("Метод: побитовый");
         System.out.println("Результат: A1 = " + x2 + ", B1 = " + y2);
-        System.out.println("     ");
-        System.out.println("5.ДЕКОДИРОВАНИЕ СООБЩЕНИЯ");
+
+        System.out.println("\n4.ДЕКОДИРОВАНИЕ СООБЩЕНИЯ");
 
         int c1 = 1055;
         int c2 = 1088;
@@ -84,8 +82,8 @@ public class VariablesTheme {
         System.out.printf("%-6c%-6c%-6c%-6c%-6c%-6c%n",
                 (char) c1, (char) c2, (char) c3,
                 (char) c4, (char) c5, (char) c6);
-        System.out.println("     ");
-        System.out.println("6.АНАЛИЗ КОДА ТОВАРА");
+
+        System.out.println("\n5.АНАЛИЗ КОДА ТОВАРА");
         int cod = 123;
         int p1 = cod / 100;
         System.out.println("Код товара: " + p1);
@@ -96,8 +94,8 @@ public class VariablesTheme {
         System.out.println("  тип упаковки - " + p3);
         System.out.println("Контрольная сумма = " + p1 + p2 + p3);
         System.out.println("Проверочный код = " + p1 * p2 * p3);
-        System.out.println("     ");
-        System.out.println("7.ТЕСТИРОВАНИЕ ДАТЧИКОВ ПЕРЕД ЗАПУСКОМ РАКЕТЫ");
+
+        System.out.println("\n6.ТЕСТИРОВАНИЕ ДАТЧИКОВ ПЕРЕД ЗАПУСКОМ РАКЕТЫ");
 
         // Byte: Температура
         byte temperature = Byte.MAX_VALUE;
@@ -144,8 +142,8 @@ public class VariablesTheme {
                 +1:""" + timeElapsed + 1 + """
                 -1:""" + (timeElapsed + 1 - 1) + """
                 """);
-        System.out.println("     ");
-        System.out.println("8.ВЫВОД ПАРАМЕТРОВ JVM И ОС");
+
+        System.out.println("\n7.ВЫВОД ПАРАМЕТРОВ JVM И ОС");
         Runtime runtime = Runtime.getRuntime();
 
         int availableProcessors = runtime.availableProcessors();
@@ -195,8 +193,7 @@ public class VariablesTheme {
                 Используемая память (МБ): %.1f
                 Максимально доступная память (МБ): %.1f
                 """, cores, totalMb, freeMb, usedMb, maxMb);
-        System.out.println("     ");
-        System.out.println("9.ЗАМЕР ВРЕМЕНИ РАБОТЫ КОДА");
+        System.out.println("\n8.ЗАМЕР ВРЕМЕНИ РАБОТЫ КОДА");
         // Время окончания
         long endNano = System.nanoTime();
         LocalTime endTime = LocalTime.now();
@@ -205,9 +202,7 @@ public class VariablesTheme {
         // Время старта
         LocalTime startTime = LocalTime.now();
         long startNano = System.nanoTime();
-
         double durationSec = (endNano - startNano) / 1_000_000_000.0;
-
         // Вывод времени
         System.out.println();
         System.out.printf("Старт проверки: %s%n", startTime.format(timeFormatter));
