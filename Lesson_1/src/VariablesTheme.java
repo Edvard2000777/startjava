@@ -85,15 +85,15 @@ public class VariablesTheme {
 
         System.out.println("\n5.АНАЛИЗ КОДА ТОВАРА");
         int cod = 123;
-        int p1 = cod / 100;
-        System.out.println("Код товара: " + p1);
-        System.out.println("  категория товара - " + p1);
-        int p2 = (cod % 100 % 100) / 10;
-        System.out.println("  подкатегория - " + p2);
-        int p3 = cod % 100 % 100 % 10;
-        System.out.println("  тип упаковки - " + p3);
-        System.out.println("Контрольная сумма = " + p1 + p2 + p3);
-        System.out.println("Проверочный код = " + p1 * p2 * p3);
+        int codT = cod / 100;
+        System.out.println("Код товара: " + codT);
+        System.out.println("  категория товара - " + codT);
+        int podCat = (cod % 100 % 100) / 10;
+        System.out.println("  подкатегория - " + podCat);
+        int TypeUp = cod % 100 % 100 % 10;
+        System.out.println("  тип упаковки - " + TypeUp);
+        System.out.println("Контрольная сумма = " + codT + podCat + TypeUp);
+        System.out.println("Проверочный код = " + codT * podCat * TypeUp);
 
         System.out.println("\n6.ТЕСТИРОВАНИЕ ДАТЧИКОВ ПЕРЕД ЗАПУСКОМ РАКЕТЫ");
 
@@ -145,7 +145,6 @@ public class VariablesTheme {
 
         System.out.println("\n7.ВЫВОД ПАРАМЕТРОВ JVM И ОС");
         Runtime runtime = Runtime.getRuntime();
-
         int availableProcessors = runtime.availableProcessors();
         // Выделенная память (байты)
         long totalMemory = runtime.totalMemory();
