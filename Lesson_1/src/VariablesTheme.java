@@ -90,10 +90,10 @@ public class VariablesTheme {
         System.out.println("  категория товара - " + codT);
         int podCat = (cod % 100 % 100) / 10;
         System.out.println("  подкатегория - " + podCat);
-        int TypeUp = cod % 100 % 100 % 10;
-        System.out.println("  тип упаковки - " + TypeUp);
-        System.out.println("Контрольная сумма = " + codT + podCat + TypeUp);
-        System.out.println("Проверочный код = " + codT * podCat * TypeUp);
+        int type = cod % 100 % 100 % 10;
+        System.out.println("  тип упаковки - " + type);
+        System.out.println("Контрольная сумма = " + codT + podCat + type);
+        System.out.println("Проверочный код = " + codT * podCat * type);
 
         System.out.println("\n6.ТЕСТИРОВАНИЕ ДАТЧИКОВ ПЕРЕД ЗАПУСКОМ РАКЕТЫ");
 
