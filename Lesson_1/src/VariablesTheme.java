@@ -1,4 +1,5 @@
 import java.io.File;
+import java.math.BigDecimal;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
@@ -6,14 +7,11 @@ public class VariablesTheme {
     public static void main(String[] args) {
         System.out.println("1.ВЫВОД ASCII-ГРАФИКИ");
         // Первая часть графики
-        System.out.println("""
-                
-                                     /\\
-                   J    a  v     v  /  \\
-                   J   a a  v   v  /_( )\\
-                J  J  aaaaa  V V  /      \\
-                 JJ  a     a  V  /___/\\___\\
-                """);
+        System.out.println("                     /\\");
+        System.out.println("   J    a  v     v  /  \\");
+        System.out.println("   J   a a  v   v  /_( )\\");
+        System.out.println("J  J  aaaaa  V V  /      \\");
+        System.out.println(" JJ  a     a  V  /___/\\___\\");
         String text = """
                 
                          /\\
@@ -25,6 +23,8 @@ public class VariablesTheme {
         System.out.println(text);
 
         System.out.println("\n2.РАСЧЕТ СТОИМОСТИ ТОВАРА");
+        System.out.println("Метод c  использованием float");
+
         float penPrice = 105.5f;
         float bookPrice = 235.23f;
         float discountRate = 0.11f;
@@ -35,6 +35,19 @@ public class VariablesTheme {
         System.out.println("Стоимость без скидки: " + totalPrice);
         System.out.println("Сумма скидки: " + discountAmount);
         System.out.println("Стоимость со скидкой: " + (totalPrice - discountAmount));
+        System.out.println("\nМетод с использованием BigDecimal");
+
+        BigDecimal penPrice1 = BigDecimal.valueOf(105.5);
+        BigDecimal bookPrice1 = BigDecimal.valueOf(235.23);
+        BigDecimal discountRate1 = BigDecimal.valueOf(0.11);
+
+        BigDecimal totalPrice1 = penPrice1.add(bookPrice1);
+        BigDecimal discountAmount1 = totalPrice1.multiply(discountRate1);
+        BigDecimal discountedPrice = totalPrice1.subtract(discountAmount1);
+
+        System.out.println("Стоимость без скидки: " + totalPrice1);
+        System.out.println("Сумма скидки: " + discountAmount1);
+        System.out.println("Стоимость со скидкой: " + discountedPrice);
         System.out.println("\n3.ПЕРЕСТАНОВКА ЗНАЧЕНИЙ ЯЧЕЕК В ТАБЛИЦЕ");
         int t1 = 2;
         int t2 = 5;
@@ -99,49 +112,48 @@ public class VariablesTheme {
 
         // Byte: Температура
         byte temperature = Byte.MAX_VALUE;
-        System.out.println("""
-                [Температура, °C]:
-                  Исходное:""" + temperature + """
-                +1:""" + (byte) (temperature + 1) + """
-                -1:""" + (byte) ((byte) (temperature + 1) - 1) + """
-                """);
+        System.out.println(
+                "[Температура, °C]:\n" +
+                        "  Исходное: " + temperature + "\n" +
+                        "  +1: " + (byte) (temperature + 1) + "\n" +
+                        "  -1: " + (byte) ((byte) (temperature + 1) - 1) + "\n"
+        );
 
         // Short: Давление
         short pressure = Short.MAX_VALUE;
-        System.out.println("""
-                [Давление, мм рт. ст.]:
-                  Исходное:""" + pressure + """
-                +1:""" + (short) (pressure + 1) + """
-                -1:""" + (short) ((short) (pressure + 1) - 1) + """
-                """);
+        System.out.println(
+                "[Давление, мм рт. ст.]:\n" +
+                        "  Исходное: " + pressure + "\n" +
+                        "  +1: " + (short) (pressure + 1) + "\n" +
+                        "  -1: " + (short) ((short) (pressure + 1) - 1) + "\n"
+        );
 
         // Char: Код состояния системы
         char systemCode = Character.MAX_VALUE;
-        System.out.println("""
-                [Код состояния системы, ед.]:
-                  Исходное:""" + (int) systemCode + """
-                +1:""" + (int) (char) (systemCode + 1) + """
-                -1:""" + (int) (char) ((char) (systemCode + 1) - 1) + """
-                """);
+        System.out.println(
+                "[Код состояния системы, ед.]:\n" +
+                        "  Исходное: " + (int) systemCode + "\n" +
+                        "  +1: " + (int) (char) (systemCode + 1) + "\n" +
+                        "  -1: " + (int) (char) ((char) (systemCode + 1) - 1) + "\n"
+        );
 
         // Int: Пройденное расстояние
         int distance = Integer.MAX_VALUE;
-        System.out.println("""
-                [Пройденное расстояние, м]:
-                  Исходное:""" + distance + """
-                +1:""" + distance + 1 + """
-                -1:""" + ((distance + 1) - 1) + """
-                """
+        System.out.println(
+                "[Пройденное расстояние, м]:\n" +
+                        "  Исходное: " + distance + "\n" +
+                        "  +1: " + (distance + 1) + "\n" +
+                        "  -1: " + ((distance + 1) - 1) + "\n"
         );
 
         // Long: Время с момента старта
         long timeElapsed = Long.MAX_VALUE;
-        System.out.println("""
-                [Время с момента старта, мс]:
-                  Исходное:""" + timeElapsed + """
-                +1:""" + timeElapsed + 1 + """
-                -1:""" + (timeElapsed + 1 - 1) + """
-                """);
+        System.out.println(
+                "[Время с момента старта, мс]:\n" +
+                        "  Исходное: " + timeElapsed + "\n" +
+                        "  +1: " + (timeElapsed + 1) + "\n" +
+                        "  -1: " + (timeElapsed + 1 - 1) + "\n"
+        );
 
         System.out.println("\n7.ВЫВОД ПАРАМЕТРОВ JVM И ОС");
         Runtime runtime = Runtime.getRuntime();
